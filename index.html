@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Train Schedule</title>
+    <!-- Bootstrap -->
+    <link 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="row">
+
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+                <h1 id="dataEntryHeading">Enter Train Data</h1>
+                
+                                <!-- 
+                                
+                                * Train Name
+    
+                                * Destination 
+                                
+                                * First Train Time in military time
+                                
+                                * Frequency in minutes
+                              
+                                * Code this app to calculate when the next train will arrive; this should be relative to the current time. -->
+                        <div class="form-group">
+                                <label for="trainNameInput">Train Name</label>
+                                <input type="text" class="form-control" id="trainNameInput" placeholder="Train Name">
+                        </div>
+                        <div class="form-group">
+                                <label for="trainNameInput">Train Number</label>
+                                <input type="text" class="form-control" id="trainNumberInput" placeholder="Train Number">
+                        </div>
+                        <div class="form-group">
+                                <label for="destinationInput">Destination</label>
+                                <input type="text" class="form-control" id="destinationInput" placeholder="Destination">
+                        </div>
+                        <div class="form-group">
+                                <label for="firstTrainTimeInput">First Train Time</label>
+                                <input type="text" class="form-control" id="firstTrainTimeInput" placeholder="First Train Time (use military time)">
+                        </div>
+                        <div class="form-group">
+                                <label for="firstTrainTimeInput">Status</label>
+                                <input type="text" class="form-control" id="statusInput" placeholder="Enter 'On Time', 'Delayed', or 'Cancelled'">
+                        </div>
+                        <div class="form-group">
+                                <label for="trainFrequencyInput">Gate/Track</label>
+                                <input type="text" class="form-control" id="gateTrackInput" placeholder="Enter Gate or Track Number">
+                        </div>
+                        <div class="form-group">
+                                <label for="trainFrequencyInput">Train Frequency</label>
+                                <input type="text" class="form-control" id="trainFrequencyInput" placeholder="Train Frequency (in minutes)">
+                        </div>
+                        <button type="button" id="submitButton" class="btn btn-primary">SUBMIT</button>
+
+        </div>
+        <div class="col-md-1"></div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" id="trainScheduleDiv">
+            <div class="row">
+                <div class="col-md-12" id="trainScheduleHeader">
+                    <h1>Train Information</h1>
+                    <div id="timeDiv"><h4 id="timeDivHeader"></h4></div>
+                </div>
+            </div>
+            <table id="trainScheduleTable">
+                <tr id="trainScheduleTableHeaderRow">
+                    <th class="tableHeader" id="timeHeader">Next Departure</th>
+                    <th class="tableHeader" id="numberHeader">No.</th>
+                    <th class="tableHeader">Train</th>
+                    <th class="tableHeader">To</th>
+                    <th class="tableHeader">Status</th>
+                    <th class="tableHeader">Gate/Track</th>
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col-md-12" id="tableDiv">
+                    <h5 id="messagingHeader">Messaging</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" id="messagesDiv">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" id="currentDateDiv">
+                    <h5 id="currentDateHeader">Current Date</h5>
+                </div>
+            </div>
+        </div>
+     
+        <div class="col-md-1"></div>
+
+    </div>
+
+    <script src="assets/javascript/logic.js"></script>
+
+</body>
+
+</html>

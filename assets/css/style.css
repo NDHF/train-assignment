@@ -1,0 +1,57 @@
+#dataEntryHeading {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+#trainScheduleHeader {
+    color: rgb(84, 109, 176);
+}
+
+.tableHeader {
+    color: rgb(84, 109, 176);
+}
+
+#messagingHeader {
+    color: rgb(84, 109, 176);
+}
+
+#currentDateHeader {
+    color: rgb(84, 109, 176);
+    text-align: right;
+}
+
+#timeHeader, #numberHeader {
+    text-align: center;
+}
+
+#currentDateDiv {
+    height: 50px;
+}
+
+#messagesDiv {
+    height: 300px;
+    background-color: rgb(3, 158, 191);
+}
+
+#trainScheduleDiv {
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+tr.dataRow {
+    background: linear-gradient(black, rgb(79, 180, 214));
+    color: white;
+}
+
+#timeDiv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
