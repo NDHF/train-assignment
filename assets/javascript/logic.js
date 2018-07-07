@@ -13,7 +13,7 @@ function currentTimeInMinutes() {
 
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyCasO5gBQiGYvI7eOHhgXcslliDvSe1p9M",
+    apiKey: "",
     authDomain: "njb-train-schedule-db.firebaseapp.com",
     databaseURL: "https://njb-train-schedule-db.firebaseio.com",
     projectId: "njb-train-schedule-db",
